@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/camera.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <b>Checkout</b>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Count</th>
+                <th>Sum</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AAA Shoes</td>
+                <td>80.00</td>
+                <td>1</td>
+                <td>80.00</td>
+            </tr>
+            <tr>
+                <td>BBB Shirt</td>
+                <td>20.00</td>
+                <td>3</td>
+                <td>60.00</td>
+            </tr>
+            <tr>
+                <td>CCC Hat</td>
+                <td>30.00</td>
+                <td>1</td>
+                <td>30.00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>Total</td>
+                <td>170.00</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <button id='btnToPay'>Pay With Face</button>
+    <br />
+    <div id="cameraPannel" hidden="hidden">
+        <div id='camera'>
+            <div id='placeholder'>
+                <p>Your browser does not support a camera!</p>
+            </div>
+        </div>
+
+        <div id='upload_status'></div>
+        <div id='upload_result'></div>
+        <br>
+        <img height='100' id='loading_img' src='images/loading.gif' width='100'>
+    </div>
+    <br>
+    <br>
+    <div id="paymentsuccess_img" hidden="hidden">
+        <img src="images/payment-success.png" height='30' width="30" >
+        <b>Your payment has been processed successfully.</b>
+        <div id="cardText"></div>
+    </div>
+    <div id="paymentfailure_img" hidden="hidden">
+        <img src="images/payment-failure.png" height='30' width="30">
+        <b>Your payment is failed, Please try again</b>
+    </div>
+
+    <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+    <script src="js/jpeg_camera/jpeg_camera_with_dependencies.min.js" type="text/javascript"></script>
+    <script src="js/paywithface.js"></script>
+</body>
+</html>

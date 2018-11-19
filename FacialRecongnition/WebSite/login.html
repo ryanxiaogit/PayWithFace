@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <input id="username" type="text" placeholder="Enter your name" />
+    <input id="btnLogin" type="button" value="Login To Profile" />
+    <input id="btnLogin2" type="button" value="Login To Pay With Face" />
+    <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+    <script>
+        $(document).ready(function () {
+            var userID = (hashCode($("#username").val()));
+            function hashCode(s) {
+                for (var i = 0, h = 0; i < s.length; i++)
+                    h = Math.imul(31, h) + s.charCodeAt(i) | 0;
+                return h + 2147483647;
+            }
+
+            var redirectToProfile = function () {
+                window.open('profile.html?user=' + userID, '_blank');
+            }
+            var redirectToPayWithFace = function () {
+                window.open('paywithface.html?user=' + userID, '_blank');
+            }
+
+            $("#btnLogin").click(redirectToProfile);
+            $("#btnLogin2").click(redirectToPayWithFace);
+        });
+    </script>
+</body>
+</html>

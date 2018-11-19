@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/camera.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <b>User Id: </b>
+    <div id='userId'></div>
+    <br>
+    <button id='create_collection'>Enable 'Pay With Face'</button>
+    <button id='delete_collection'>Disable 'Pay With Face' & Delete facial data</button>
+    <br />
+    <div id="profilePanel" hidden="hidden">
+        <div id='camera'>
+            <div id='placeholder'>
+                <p>Your browser does not support a camera!</p>
+            </div>
+        </div>
+        <br />
+        <input type="text" placeholder="Card Number" id="txtCardNumer" />
+        <br />
+        <input type="text" placeholder="Name On Card" id="txtNameOnCard" />
+        <br />
+        <input type="text" placeholder="CVN2" id="txtCVN" />
+        <br>
+        <button id='savebtn'>Add Photo To Profile</button>
+    </div>
+
+    <div id="processsuccess_img" hidden="hidden">
+        <img src="images/payment-success.png" height='30' width="30">
+        <b>Your profile has been Updated.</b>
+    </div>
+    <div id="processfailure_img" hidden="hidden">
+        <img src="images/payment-failure.png" height='30' width="30">
+        <b>Update failure, Please try again</b>
+    </div>
+
+    <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+    <script src="js/jpeg_camera/jpeg_camera_with_dependencies.min.js" type="text/javascript"></script>
+    <script src="js/profile.js" type="text/javascript"></script>
+</body>
+</html>

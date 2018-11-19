@@ -3,3 +3,8 @@
 ################################################################################
 
 /FacialRecongnition/AWSRekonition/bin/Debug/netcoreapp2.1
+/FacialRecongnition/AWSRekonition/obj/Debug
+/FacialRecongnition/AWSRekonition/obj
+/FacialRecongnition/WebApi/bin/Debug/netcoreapp2.1
+/FacialRecongnition/WebApi/obj
+/FacialRecongnition/.vs
